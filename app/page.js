@@ -36,7 +36,7 @@ export default function Chatbot() {
         setTimeout(() => {
           setStatusMessage('Online');
         }, 2000);
-      }, Math.random() * 10000 + 1000); // Randomly show a message every 5-15 seconds
+      }, Math.random() * 10000 + 5000); // Randomly show a message every 5-15 seconds
     }
 
     return () => {
