@@ -124,8 +124,8 @@ export default function Chatbot() {
   }, [messages]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black p-2 sm:p-4">
-      <div className="flex flex-col w-full max-w-lg h-screen bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+    <div className="flex items-center justify-center min-h-screen bg-black ">
+      <div className="flex flex-col w-full max-w-lg h-screen bg-gray-900 rounded-lg shadow-lg">
         {/* Header with Image, Name, and Status Message */}
         <div className="flex items-center p-3 bg-gray-800">
           <Image
@@ -142,7 +142,7 @@ export default function Chatbot() {
         </div>
 
         {/* Chat Area */}
-        <div className="flex flex-col flex-grow p-2 sm:p-4 overflow-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
+        <div className="flex-grow p-2 sm:p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
           <div className="flex flex-col space-y-2">
             {messages.map((message, index) => (
               <div
