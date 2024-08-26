@@ -17,7 +17,7 @@ export default function Chatbot() {
 
   // Messages to display randomly, using useMemo to ensure consistency
   const randomMessages = useMemo(() => [
-    "Eu estou te observando a muito tempo...",
+    "9B7Pc4oyG7I7aSohxcd-wW46UPNNgh_L7rv_yhgA8etIVoQYScAG9jjLPgK6vo_EvJIGNP32IAjli8GbY-sSpJiemRPO0fnpmTgWgE8aYOB0EpQUNzpqPR7kA_8psKDqXnaoQfwQ4UCFsdf4TbFehQ",
     "para de me olhar sem vergonha :)",
     "eu to com fome..."
   ], []);
@@ -35,8 +35,8 @@ export default function Chatbot() {
         // Hide the random message after 2 seconds
         setTimeout(() => {
           setStatusMessage('Online');
-        }, 2000);
-      }, Math.random() * 10000 + 5000); // Randomly show a message every 5-15 seconds
+        }, 900);
+      }, Math.random() * 50000 + 10000); // Randomly show a message every 5-15 seconds
     }
 
     return () => {
@@ -174,7 +174,7 @@ export default function Chatbot() {
             placeholder="me pergunte alguma coisa..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyPress}
             disabled={isLoading}
           />
           <button
